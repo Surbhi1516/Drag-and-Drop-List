@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;1,500&family=Montserrat:wght@500&family=Roboto&family=Ubuntu&display=swap');
+
+:root {
+  --border-color: #AEBDCA;
+  --background-color: #F5EFE6;
+  --list-item: #7895B2;
+  --style-color: #E8DFCA;
+}
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: #F5EFE6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.drag-list {
+  border: 1px solid var(--border-color);
+  color: var(--list-item);
+  list-style: none;
+  padding: 0;
+
+}
+
+.drag-list li {
+  background-color: white;
+  display: flex;
+  flex: 1;
+}
+
+.drag-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.number {
+  background-color: var(--style-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  height: 60px;
+  width: 60px;
+  color: var(--list-item);
+}
+
+.drag-list li.over .draggable {
+  background-color: var(--background-color);
+}
+
+.drag-list .food-name {
+  margin: 0 20px 0 0;
+}
+
+.drag-list li.right .food-name {
+  color: #3ae374;
+}
+
+.drag-list li.wrong .food-name {
+  color: #ff3838;
+}
+
+.draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  flex: 1;
+}
+
+.check {
+  /*  */
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  font-size: larger;
+  transition: all 0.2s;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+  background-color: var(--style-color);
+  color: var(--list-item);
+
+}
+
+.check:hover {
+  border: none;
+  background-color: var(--list-item);
+  color: white;
+}
+
+.check:active {
+  transform: scale(0.98);
+}
